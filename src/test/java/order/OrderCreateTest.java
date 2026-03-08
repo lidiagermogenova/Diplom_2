@@ -15,25 +15,10 @@ import java.util.List;
 
 import static java.net.HttpURLConnection.*;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static testdata.UserGenerator.credsFrom;
-import static testdata.UserGenerator.randomUser;
 
 public class OrderCreateTest extends UserBaseTest {
     private final OrderSteps orderSteps = new OrderSteps();
 
-    /*@Before
-    public void setUp() {
-        // Пользователь нужен только для теста "с авторизацией" — создаём один раз
-        createdUser = randomUser();
-        userSteps.register(createdUser)
-                .then()
-                .statusCode(HTTP_OK);
-
-        accessToken = userSteps.login(credsFrom(createdUser))
-                .then()
-                .extract()
-                .path("accessToken");
-    }*/
     @After
     public void tearDown() {
         if (accessToken != null) {
