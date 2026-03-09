@@ -7,5 +7,5 @@ target/
 # Mac OS
 .DS_Store
 # Логи и отчеты
-*.log
-allure-results/
+*.logy
+.allure/
